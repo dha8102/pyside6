@@ -6,8 +6,12 @@ class 위젯(QWidget):
         self.setWindowTitle("위젯 예제")
         레이블 = QLabel("레이블")
         버튼 = QPushButton("클릭")
-        레이아웃 = QHBoxLayout()
+        버튼.clicked.connect(self.버튼클릭)
+        레이아웃 = QVBoxLayout()
         레이아웃.addWidget(레이블)
         레이아웃.addWidget(버튼)
         self.setLayout(레이아웃)
+    
+    def 버튼클릭(self):
+        print("버튼클릭")
         
