@@ -21,6 +21,17 @@ class 메인윈도우(QMainWindow):
         self.addToolBar(툴바)
         툴바.addAction(종료액션)
         
+        액션 = QAction("액션", self)
+        액션.setStatusTip("메세지출력")
+        액션.triggered.connect(self.액션클릭)
+        툴바.addAction(액션)
+        
+        툴바.addSeparator()
+        툴바.addWidget(QPushButton("클릭"))
+        
     def 종료액션클릭(self):
         self.앱.quit()
+    
+    def 액션클릭(self):
+        self.statusBar().showMessage("2초간메세지출력",2000)
         

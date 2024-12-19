@@ -3,7 +3,7 @@ from widget import 메인윈도우
 import sys
 
 앱 = QApplication(sys.argv)
- 
+앱.setStyle("Windows")
 윈도우 = 메인윈도우(앱)
 윈도우.show()
 앱.exec()

@@ -6,5 +6,4 @@ import sys
 
 윈도우 = 위젯()
 윈도우.show()
-
 앱.exec()
